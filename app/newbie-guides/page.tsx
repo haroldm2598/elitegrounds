@@ -7,11 +7,11 @@ export default function page() {
 			<HeadingSection title='Newbie Guides' />
 
 			<section className='mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				<Card imageSrc='/newbieguide/elitegroundsnew.jpg' />
+				<Card imageSrc='/newbieguide/elitegroundsnew2.jpg' />
+				<Card imageSrc='/newbieguide/elitegroundsnew3.jpg' />
+				<Card imageSrc='/newbieguide/elitegroundsnew.jpg' />
+				<Card imageSrc='/newbieguide/elitegroundsnew2.jpg' />
 			</section>
 		</section>
 	);

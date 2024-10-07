@@ -1,3 +1,18 @@
+import { NavLinksProps } from '@/lib/definitions';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+
+export const navLinks: Array<NavLinksProps> = [
+	{ name: 'Server Information', links: '/server-information' },
+	{ name: 'Downloads', links: '/downloads' },
+	{ name: 'Newbie Guides', links: '/newbie-guides' }
+];
+
+export const socialLinks = [
+	{ Icon: FaFacebookF, link: '/', name: 'Facebook' },
+	{ Icon: FaTwitter, link: '/', name: 'Twitter' },
+	{ Icon: FaInstagram, link: '/', name: 'Instagram' }
+];
+
 export const serverInfoData = [
 	{ infoName: '230 Max Level | 207 Max Skill' },
 	{ infoName: 'Sync Gameplay' },

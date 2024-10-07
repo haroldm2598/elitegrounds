@@ -1,15 +1,9 @@
 import Link from 'next/link';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-
-const socialLinks = [
-	{ Icon: FaFacebookF, link: '/', name: 'Facebook' },
-	{ Icon: FaTwitter, link: '/', name: 'Twitter' },
-	{ Icon: FaInstagram, link: '/', name: 'Instagram' }
-];
+import { socialLinks } from '@/lib/dataSample';
 
 export default function Footer() {
 	return (
-		<footer className='flex justify-center gap-6'>
+		<footer className='pb-4 flex justify-center gap-6'>
 			{socialLinks?.map((item, index) => {
 				const { Icon, link, name } = item;
 				return (
