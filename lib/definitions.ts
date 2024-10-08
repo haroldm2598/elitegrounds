@@ -14,3 +14,9 @@ export interface TwoColumnSectionProps {
 interface ServerInfoData {
 	infoName: string;
 }
+
+export interface CardProps {
+	imageSrc: string;
+	title: string;
+	date: string;
+}

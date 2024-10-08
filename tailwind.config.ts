@@ -22,7 +22,8 @@ const config: Config = {
 					main300: '#919497',
 					main400: '#1B1B1B',
 					main500: '#24272A',
-					main600: '#393939'
+					main600: '#3c4147'
+					// main600: '#393939'
 				},
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

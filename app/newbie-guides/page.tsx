@@ -1,5 +1,6 @@
 import Card from '@/components/newbie-guide/Card';
 import HeadingSection from '@/components/reusable/HeadingSection';
+import { newbieData } from '@/lib/dataSample';
 
 export default function page() {
 	return (
@@ -7,12 +8,13 @@ export default function page() {
 			<section className='min-h-screen max-w-7xl mx-auto py-10'>
 				<HeadingSection title='Newbie Guides' />
 
-				<section className='mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
-					<Card imageSrc='/newbieguide/elitegroundsnew.jpg' />
-					<Card imageSrc='/newbieguide/elitegroundsnew2.jpg' />
-					<Card imageSrc='/newbieguide/elitegroundsnew3.jpg' />
-					<Card imageSrc='/newbieguide/elitegroundsnew.jpg' />
-					<Card imageSrc='/newbieguide/elitegroundsnew2.jpg' />
+				<section className='max-w-5xl mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
+					{newbieData?.map((item, index) => {
+						const { imageSrc, title, date } = item;
+						return (
+							<Card key={index} imageSrc={imageSrc} title={title} date={date} />
+						);
+					})}
 				</section>
 			</section>
 		</main>

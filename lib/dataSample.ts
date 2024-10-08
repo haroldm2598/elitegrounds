@@ -43,3 +43,31 @@ export const serverInfoData = [
 	{ infoName: '101% Free to play' },
 	{ infoName: 'Guaranteed 101% Play to earn' }
 ];
+
+export const newbieData = [
+	{
+		imageSrc: '/newbieguide/elitegroundsnew.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS EVENT',
+		date: '09/12/24'
+	},
+	{
+		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
+		title: 'GUILD LEADER AND STREAMERS',
+		date: '09/09/24'
+	},
+	{
+		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
+		title: 'OFFICIAL BETA TEST',
+		date: '09/05/24'
+	},
+	{
+		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
+		title: 'OFFICIAL BETA TEST',
+		date: '09/04/24'
+	},
+	{
+		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS EVENT',
+		date: '09/01/24'
+	}
+];
