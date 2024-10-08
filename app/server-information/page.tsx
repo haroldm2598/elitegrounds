@@ -4,12 +4,14 @@ import { serverInfoData } from '@/lib/dataSample';
 
 export default function page() {
 	return (
-		<section className='min-h-screen max-w-7xl mx-auto mt-10'>
-			<HeadingSection title='Server Information' />
+		<main className='bg-custom-main400'>
+			<section className='min-h-screen max-w-7xl mx-auto pt-10'>
+				<HeadingSection title='Server Information' />
 
-			<section className='p-8'>
-				<TwoColumnSection items={serverInfoData} />
+				<section className='p-8'>
+					<TwoColumnSection items={serverInfoData} />
+				</section>
 			</section>
-		</section>
+		</main>
 	);
 }

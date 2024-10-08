@@ -7,24 +7,29 @@ interface CardProps {
 
 export default function Card({ imageSrc }: CardProps) {
 	return (
-		<div className='bg-custom-main400 h-80 max-w-xs w-auto rounded-md shadow-lg overflow-hidden'>
-			<div className='flex flex-col'>
-				<Image
-					src={imageSrc}
-					height='1000'
-					width='1000'
-					className='h-auto w-full object-fill'
-					alt='thumbnail'
-				/>
+		<section className='bg-custom-main500 h-80 max-w-xs w-auto flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all ease-in-out duration-300 overflow-hidden group border-2 border-custom-main600'>
+			<Image
+				src={imageSrc}
+				height='1000'
+				width='1000'
+				className='h-auto w-full object-fill transform transition-transform duration-300 group-hover:scale-110'
+				alt='thumbnail'
+			/>
 
-				<div className='p-2 h-auto flex flex-col justify-between'>
-					<h1 className='text-white font-semibold text-xl'>title</h1>
+			<div className='flex-1 p-2 flex flex-col justify-between'>
+				<div className='-space-y-1'>
+					<h1 className='text-custom-main200 font-bold text-lg uppercase'>
+						title
+					</h1>
+					<h2 className='text-custom-main300 font-semibold text-sm'>
+						02/12/24
+					</h2>
+				</div>
 
-					<div className='self-end'>
-						<Button>Read more..</Button>
-					</div>
+				<div className=''>
+					<Button>Read more</Button>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

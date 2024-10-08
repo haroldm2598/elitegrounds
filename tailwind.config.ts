@@ -9,12 +9,20 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			backgroundImage: {
+				'custom-gradient-top':
+					'linear-gradient(to top, #DBB8B6 0%, #EA847F 50%, #E33E31 100%)',
+				'custom-gradient-right':
+					'linear-gradient(to right, #DBB8B6 0%, #EA847F 50%, #E33E31 100%)'
+			},
 			colors: {
 				custom: {
-					main100: '#33372C',
-					main200: '#FF885B',
-					main300: '#FFE5CF',
-					main400: '#5F5454'
+					main100: '#272727',
+					main200: '#DADDE0',
+					main300: '#919497',
+					main400: '#1B1B1B',
+					main500: '#24272A',
+					main600: '#393939'
 				},
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

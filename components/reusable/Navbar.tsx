@@ -32,7 +32,7 @@ export default function Navbar() {
 									pathname === item.links
 										? 'text-custom-main200'
 										: 'text-custom-main300'
-								} hover:text-custom-main200 font-medium transition-all duration-300 ease-in-out`}
+								} hover:text-custom-main200 font-semibold uppercase transition-all duration-300 ease-in-out`}
 							>
 								<Link href={item.links}>{item.name}</Link>
 							</li>
