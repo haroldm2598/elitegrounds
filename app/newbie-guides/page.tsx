@@ -1,10 +1,11 @@
 import Card from '@/components/newbie-guide/Card';
 import HeadingSection from '@/components/reusable/HeadingSection';
 import { newbieData } from '@/lib/dataSample';
+import { lato } from '@/lib/font';
 
 export default function page() {
 	return (
-		<main className='bg-custom-main400'>
+		<main className={`${lato.className} bg-custom-main400`}>
 			<section className='min-h-screen max-w-7xl mx-auto py-10'>
 				<HeadingSection title='Newbie Guides' />
 

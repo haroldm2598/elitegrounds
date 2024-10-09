@@ -1,15 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { navLinks } from '@/lib/dataSample';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+
+import { navLinks } from '@/lib/dataSample';
+import { lato } from '@/lib/font';
 
 export default function Navbar() {
 	const pathname = usePathname();
 
 	return (
-		<header className='bg-custom-main100 py-4'>
+		<header className={`${lato.className} bg-custom-main100 py-4`}>
 			<nav className='max-w-7xl mx-auto flex justify-between items-center'>
 				<div>
 					<Link href='/'>
@@ -23,7 +25,7 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				<ul className='hidden lg:flex gap-4'>
+				<ul className='hidden lg:flex gap-8'>
 					{navLinks?.map((item, index) => {
 						return (
 							<li
@@ -32,7 +34,7 @@ export default function Navbar() {
 									pathname === item.links
 										? 'text-custom-main200'
 										: 'text-custom-main300'
-								} hover:text-custom-main200 font-semibold uppercase transition-all duration-300 ease-in-out`}
+								} text-lg hover:text-custom-main200 font-semibold transition-all duration-300 ease-in-out`}
 							>
 								<Link href={item.links}>{item.name}</Link>
 							</li>

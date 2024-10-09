@@ -1,5 +1,6 @@
 import HeadingSection from '@/components/reusable/HeadingSection';
 import { Three3DCard } from '@/components/ui/kit/Three3DCard';
+import { lato } from '@/lib/font';
 
 const downloadSource = [
 	{ name: 'mediafire', link: '/' },
@@ -9,7 +10,7 @@ const downloadSource = [
 
 export default function page() {
 	return (
-		<main className='bg-custom-main400'>
+		<main className={`${lato.className} bg-custom-main400`}>
 			<section className='min-h-screen max-w-7xl mx-auto pt-10'>
 				<HeadingSection title='Downloads' />
 
