@@ -1,14 +1,16 @@
-import { Button } from '@/components/ui/kit/button';
-import { lato } from '@/lib/font';
+import { FaArrowRightLong } from 'react-icons/fa6';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowRightLong } from 'react-icons/fa6';
+
+import { Button } from '@/components/ui/kit/button';
+
+import { lato } from '@/lib/font';
 
 export default function Home() {
 	return (
-		<main className={`${lato.className} bg-custom-main400`}>
-			<section className='min-h-screen max-w-7xl mx-auto flex relative flex-col md:flex-row items-center justify-between '>
-				<section className='order-1 lg:order-0 flex'>
+		<main className={`${lato.className} bg-custom-main400 overflow-hidden`}>
+			<section className='min-h-screen max-w-7xl py-10 lg:py-0 mx-auto flex relative flex-col md:flex-row items-center lg:justify-between '>
+				<section className='order-0 flex'>
 					<div className='w-3 h-44 bg-custom-gradient-top mr-4 my-auto rounded-sm'></div>
 
 					<div className='space-y-6'>
@@ -41,7 +43,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className='order-0 lg:order-1'>
+				<section className='order-1'>
 					<Image
 						src='/images/chibi.png'
 						alt='Chibi characters'
@@ -50,8 +52,8 @@ export default function Home() {
 						className='w-full h-auto max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl relative z-50'
 					/>
 				</section>
-
-				<div className='h-[36rem] w-full max-w-3xl absolute z-0 -right-56 bg-custom-gradient-right rounded-md'></div>
+				{/* <div className='absolute left-1/2 transform -translate-x-1/2 top-10 sm:top-20 md:top-32 lg:top-40 w-[90%] sm:w-2/3 lg:w-1/2 h-[200px] sm:h-[300px] lg:h-[400px] bg-custom-gradient-right md:rounded-none lg:rounded-md'></div> */}
+				<div className='h-[36rem] w-full max-w-3xl hidden lg:block lg:absolute z-0 bottom-auto -right-56 bg-custom-gradient-right md:rounded-none lg:rounded-md'></div>
 			</section>
 		</main>
 	);
