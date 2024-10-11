@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { navLinks } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
-// import DrawerKit from '../ui/kit/Drawer';
 import DrawerDaisy from '../ui/kit/DrawerDaisy';
 
 export default function Navbar() {
