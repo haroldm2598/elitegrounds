@@ -1,3 +1,4 @@
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import { Button } from './button';
 
 export default function DrawerDaisy() {
@@ -11,8 +12,13 @@ export default function DrawerDaisy() {
 							document.getElementById('sidebar-drawer') as HTMLInputElement
 						).checked = true)
 					}
+					size='icon'
+					variant='ghost'
 				>
-					Open Drawer
+					<IoMdMenu
+						size='42'
+						className='text-custom-main200 hover:text-custom-main400'
+					/>
 				</Button>
 			</section>
 
@@ -23,15 +29,16 @@ export default function DrawerDaisy() {
 					className='drawer-overlay'
 				></label>
 				<section className='menu bg-custom-main500 text-base-content min-h-full w-full md:w-96 p-2'>
-					<div className='mx-0'>
+					<div className='mx-0 block md:hidden'>
 						<Button
 							onClick={() =>
 								((
 									document.getElementById('sidebar-drawer') as HTMLInputElement
 								).checked = false)
 							}
+							size='icon'
 						>
-							Close Button
+							<IoMdClose size='42' />
 						</Button>
 					</div>
 				</section>
