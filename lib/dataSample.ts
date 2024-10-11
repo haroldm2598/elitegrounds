@@ -7,6 +7,12 @@ export const navLinks: Array<NavLinksProps> = [
 	{ name: 'Newbie Guides', links: '/newbie-guides' }
 ];
 
+export const mobileNavLinks: Array<NavLinksProps> = [
+	{ name: 'Home', links: '/' },
+	{ name: 'Server Information', links: '/server-information' },
+	{ name: 'Newbie Guides', links: '/newbie-guides' }
+];
+
 export const socialLinks = [
 	{ Icon: FaFacebookF, link: '/', name: 'Facebook' },
 	{ Icon: FaTwitter, link: '/', name: 'Twitter' },

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { navLinks } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
-import DrawerDaisy from '../ui/kit/DrawerDaisy';
+import MobileDrawer from '../ui/kit/MobileDrawer';
 
 export default function Navbar() {
 	const pathname = usePathname();
@@ -45,7 +45,7 @@ export default function Navbar() {
 				</ul>
 
 				<div className='flex mr-6 lg:hidden'>
-					{/* <DrawerKit /> */} <DrawerDaisy />
+					<MobileDrawer />
 				</div>
 			</nav>
 		</header>
