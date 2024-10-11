@@ -14,7 +14,7 @@ export default function Navbar() {
 
 	return (
 		<header className={`${lato.className} bg-custom-main100 py-4`}>
-			<nav className='max-w-7xl mx-auto flex justify-between items-center'>
+			<nav className='max-w-7xl mx-auto flex justify-between items-center px-6 xl:px-0'>
 				<div>
 					<Link href='/'>
 						<Image

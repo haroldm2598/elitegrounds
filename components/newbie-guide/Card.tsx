@@ -10,7 +10,7 @@ export default function Card({ imageSrc, title, date }: CardProps) {
 					src={imageSrc}
 					height='1000'
 					width='1000'
-					className='h-auto w-full transform transition-transform duration-300 group-hover:scale-110'
+					className='h-auto w-full object-contain transform transition-transform duration-300 group-hover:scale-110'
 					alt='thumbnail'
 				/>
 			</div>

@@ -67,13 +67,13 @@ export const newbieData = [
 		date: '09/05/24'
 	},
 	{
-		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
-		title: 'OFFICIAL BETA TEST',
+		imageSrc: '/newbieguide/elitegroundsnew4.jpg',
+		title: 'bakbakan round',
 		date: '09/04/24'
 	},
 	{
-		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
-		title: 'RAN ONLINE ELITEGROUNDS EVENT',
+		imageSrc: '/newbieguide/elitegroundsnew5.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS OFFICIAL SERVER',
 		date: '09/01/24'
 	}
 ];
