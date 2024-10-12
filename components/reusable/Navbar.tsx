@@ -44,7 +44,7 @@ export default function Navbar() {
 					})}
 				</ul>
 
-				<div className='flex mr-6 lg:hidden'>
+				<div className='flex lg:hidden'>
 					<MobileDrawer />
 				</div>
 			</nav>

@@ -51,8 +51,12 @@ export default function MobileDrawer() {
 								).checked = false)
 							}
 							size='icon'
+							variant='ghost'
 						>
-							<IoMdClose size='42' />
+							<IoMdClose
+								size='42'
+								className='text-custom-main200 hover:text-custom-main400'
+							/>
 						</Button>
 					</div>
 

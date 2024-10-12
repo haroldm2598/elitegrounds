@@ -6,7 +6,19 @@ import Link from 'next/link';
 export default function Card({ id, imageSrc, title, date }: CardProps) {
 	return (
 		<section className='bg-custom-main500 h-80 max-w-72 w-auto flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all ease-in-out duration-300 overflow-hidden group border-[1px] border-solid border-custom-main600'>
-			<div className='aspect-[2]'>
+			<figure className=''>
+				<Image
+					src={imageSrc}
+					height='1500'
+					width='1500'
+					className='h-44 w-full object-cover transform transition-transform duration-300 group-hover:scale-110'
+					alt='thumbnail'
+				/>
+			</figure>
+
+			{/* ORIGINAL CODE */}
+			{/*  max-w-72 for section of the card */}
+			{/* <div className='aspect-[2]'>
 				<Image
 					src={imageSrc}
 					height='1000'
@@ -14,7 +26,7 @@ export default function Card({ id, imageSrc, title, date }: CardProps) {
 					className='h-auto w-full object-contain transform transition-transform duration-300 group-hover:scale-110'
 					alt='thumbnail'
 				/>
-			</div>
+			</div> */}
 
 			<div className='flex-1 p-2 flex flex-col justify-between'>
 				<div>
@@ -26,7 +38,7 @@ export default function Card({ id, imageSrc, title, date }: CardProps) {
 
 				<div>
 					<Link href={`/newbie-guides/${id}`}>
-						<Button>Read more</Button>
+						<Button className='hover:bg-primary/70'>Read more</Button>
 					</Link>
 				</div>
 			</div>
