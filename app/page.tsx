@@ -6,6 +6,11 @@ import { Button } from '@/components/ui/kit/button';
 
 import { lato } from '@/lib/font';
 
+export const metadata = {
+	title: 'Ran Online | elitegrounds',
+	description: 'Home page of ran online elitegrounds server'
+};
+
 export default function Home() {
 	return (
 		<main className={`${lato.className} bg-custom-main400 overflow-hidden`}>

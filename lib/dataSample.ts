@@ -82,3 +82,9 @@ export const newbieData = [
 		date: '09/01/24'
 	}
 ];
+
+export const downloadSource = [
+	{ name: 'mediafire', link: '/' },
+	{ name: 'google drive', link: '/server-information' },
+	{ name: 'mega', link: '/newbie-guides' }
+];

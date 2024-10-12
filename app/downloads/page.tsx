@@ -1,12 +1,11 @@
 import HeadingSection from '@/components/reusable/HeadingSection';
 import { Three3DCard } from '@/components/ui/kit/Three3DCard';
+import { downloadSource } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
-const downloadSource = [
-	{ name: 'mediafire', link: '/' },
-	{ name: 'google drive', link: '/server-information' },
-	{ name: 'mega', link: '/newbie-guides' }
-];
+export const metadata = {
+	title: 'Ran online Elitegrounds | Downloads'
+};
 
 export default function page() {
 	return (
