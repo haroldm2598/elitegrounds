@@ -13,7 +13,7 @@ export default function page() {
 			<section className='min-h-screen max-w-7xl mx-auto pt-10'>
 				<HeadingSection title='Downloads' />
 
-				<div className=''>
+				<div>
 					<Three3DCard
 						title='download full client version and register via game launcher'
 						downloadSource={downloadSource}

@@ -1,5 +1,7 @@
-import { NavLinksProps } from '@/lib/definitions';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { DownloadSourceProps, NavLinksProps } from '@/lib/definitions';
+import { FaFacebookF } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import { SiMediafire, SiGoogledrive, SiMega } from 'react-icons/si';
 
 export const navLinks: Array<NavLinksProps> = [
 	{ name: 'Server Information', links: '/server-information' },
@@ -14,9 +16,18 @@ export const mobileNavLinks: Array<NavLinksProps> = [
 ];
 
 export const socialLinks = [
-	{ Icon: FaFacebookF, link: '/', name: 'Facebook' },
-	{ Icon: FaTwitter, link: '/', name: 'Twitter' },
-	{ Icon: FaInstagram, link: '/', name: 'Instagram' }
+	{
+		Icon: FaFacebookF,
+		link: 'https://www.facebook.com/elitegroundsep7',
+		name: 'elitegroundsep7',
+		color: 'text-sky-700'
+	},
+	{
+		Icon: FcGoogle,
+		link: 'mailto:elitegroundsran@gmail.com',
+		name: 'elitegroundsran@gmail.com',
+		color: 'default'
+	}
 ];
 
 export const serverInfoData = [
@@ -83,8 +94,20 @@ export const newbieData = [
 	}
 ];
 
-export const downloadSource = [
-	{ name: 'mediafire', link: '/' },
-	{ name: 'google drive', link: '/server-information' },
-	{ name: 'mega', link: '/newbie-guides' }
+export const downloadSource: DownloadSourceProps[] = [
+	{
+		name: 'mediafire',
+		link: 'https://www.mediafire.com/file/sb89yqaj4c7upne/RanEliteGroundsEP7.exe/file',
+		Icon: SiMediafire
+	},
+	{
+		name: 'google drive',
+		link: 'https://drive.google.com/file/d/1YRqS6C6dnakbzkcpPGEDGj4mQf9QYUBD/view',
+		Icon: SiGoogledrive
+	},
+	{
+		name: 'mega',
+		link: 'https://mega.nz/file/UQAUDCab#q8Tj10iKOuBEgEfmDcG8Sm0xj0C41619b4ANopYfX7Y',
+		Icon: SiMega
+	}
 ];

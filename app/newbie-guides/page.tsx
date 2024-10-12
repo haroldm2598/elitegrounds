@@ -18,10 +18,10 @@ export default function NewbiePage() {
 				<HeadingSection title='Newbie Guides' />
 
 				<section className='max-w-5xl mx-auto my-5 lg:my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
-					<Suspense fallback={<SkeletonCard />}>
-						{newbieData?.map((item) => {
-							const { id, imageSrc, title, date } = item;
-							return (
+					{newbieData?.map((item) => {
+						const { id, imageSrc, title, date } = item;
+						return (
+							<Suspense key={id} fallback={<SkeletonCard />}>
 								<Card
 									key={id}
 									id={id}
@@ -29,9 +29,9 @@ export default function NewbiePage() {
 									title={title}
 									date={date}
 								/>
-							);
-						})}
-					</Suspense>
+							</Suspense>
+						);
+					})}
 				</section>
 			</section>
 		</main>

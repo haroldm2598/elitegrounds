@@ -1,9 +1,8 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { CardBody, CardContainer, CardItem } from '../3d-card';
+import { DownloadSourceProps } from '@/lib/definitions';
 
 interface Three3DCardProps {
 	title: string;
@@ -11,16 +10,11 @@ interface Three3DCardProps {
 	downloadSource: DownloadSourceProps[];
 }
 
-interface DownloadSourceProps {
-	name: string;
-	link: string;
-}
-
 export function Three3DCard({ title, downloadSource }: Three3DCardProps) {
 	return (
 		<CardContainer className='inter-var'>
 			<CardBody className='bg-custom-main500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:max-w-lg h-auto rounded-xl p-6 border shadow-lg'>
-				<CardItem translateZ='50' className='w-full mt-4'>
+				<CardItem translateZ='30' className='w-full mt-4'>
 					<Image
 						src='/images/chibi.png'
 						height='1000'
@@ -31,7 +25,7 @@ export function Three3DCard({ title, downloadSource }: Three3DCardProps) {
 				</CardItem>
 
 				<CardItem
-					translateZ='100'
+					translateZ='50'
 					className='mt-4 text-center text-xl font-black text-custom-main200 uppercase'
 				>
 					{title}
@@ -39,20 +33,26 @@ export function Three3DCard({ title, downloadSource }: Three3DCardProps) {
 
 				<section className='flex justify-center gap-8 mt-10'>
 					{downloadSource?.map((item, index) => {
+						const { link, name, Icon } = item;
+
 						return (
-							<div key={index} className='group'>
-								<Link href={item.link}>
-									<CardItem
-										translateZ={10}
-										as='button'
-										className='px-8 py-4 flex items-center rounded-md bg-black text-white text-xs font-bold space-x-2 overflow-hidden transition-all duration-300 ease-in-out group-hover:bg-custom-main600'
-									>
-										<h1 className='text-custom-main200 uppercase'>
-											{item.name}
-										</h1>
-									</CardItem>
+							<CardItem
+								key={index}
+								translateZ={40}
+								as='button'
+								className='group'
+							>
+								<Link
+									href={link}
+									className='p-4 flex items-center rounded-md bg-black text-white text-xs font-bold space-x-2 overflow-hidden transition-all duration-300 ease-in-out group-hover:bg-custom-main600'
+								>
+									<span className='text-custom-main200 uppercase'>{name}</span>
+									<Icon
+										size='18'
+										className='ml-2 transition-all ease-in-out duration-300 group-hover:translate-x-2'
+									/>
 								</Link>
-							</div>
+							</CardItem>
 						);
 					})}
 				</section>

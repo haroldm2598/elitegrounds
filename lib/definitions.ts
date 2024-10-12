@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export interface NavLinksProps {
 	name: string;
 	links: string;
@@ -20,4 +22,10 @@ export interface CardProps {
 	imageSrc: string;
 	title: string;
 	date: string;
+}
+
+export interface DownloadSourceProps {
+	name: string;
+	link: string;
+	Icon: IconType;
 }

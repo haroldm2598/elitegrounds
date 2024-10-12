@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/kit/button';
 import { lato } from '@/lib/font';
 
 export const metadata = {
-	title: 'Ran Online | elitegrounds',
+	title: 'Ran Online Elite Grounds EP7',
 	description: 'Home page of ran online elitegrounds server'
 };
 
