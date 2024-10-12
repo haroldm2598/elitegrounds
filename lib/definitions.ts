@@ -16,6 +16,7 @@ interface ServerInfoData {
 }
 
 export interface CardProps {
+	id: string;
 	imageSrc: string;
 	title: string;
 	date: string;

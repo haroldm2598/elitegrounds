@@ -52,26 +52,31 @@ export const serverInfoData = [
 
 export const newbieData = [
 	{
+		id: '1',
 		imageSrc: '/newbieguide/elitegroundsnew.jpg',
 		title: 'RAN ONLINE ELITEGROUNDS EVENT',
 		date: '09/12/24'
 	},
 	{
+		id: '2',
 		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
 		title: 'GUILD LEADER AND STREAMERS',
 		date: '09/09/24'
 	},
 	{
+		id: '3',
 		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
 		title: 'OFFICIAL BETA TEST',
 		date: '09/05/24'
 	},
 	{
+		id: '4',
 		imageSrc: '/newbieguide/elitegroundsnew4.jpg',
 		title: 'bakbakan round',
 		date: '09/04/24'
 	},
 	{
+		id: '5',
 		imageSrc: '/newbieguide/elitegroundsnew5.jpg',
 		title: 'RAN ONLINE ELITEGROUNDS OFFICIAL SERVER',
 		date: '09/01/24'

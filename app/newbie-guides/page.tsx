@@ -11,9 +11,15 @@ export default function page() {
 
 				<section className='max-w-5xl mx-auto mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
 					{newbieData?.map((item, index) => {
-						const { imageSrc, title, date } = item;
+						const { id, imageSrc, title, date } = item;
 						return (
-							<Card key={index} imageSrc={imageSrc} title={title} date={date} />
+							<Card
+								key={index}
+								id={id}
+								imageSrc={imageSrc}
+								title={title}
+								date={date}
+							/>
 						);
 					})}
 				</section>
