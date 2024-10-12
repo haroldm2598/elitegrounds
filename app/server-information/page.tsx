@@ -3,6 +3,10 @@ import TwoColumnSection from '@/components/reusable/TwoColumnSection';
 import { serverInfoData } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
+export const metadata = {
+	title: 'Ran online Elitegrounds | Server Info'
+};
+
 export default function page() {
 	return (
 		<main className={`${lato.className} bg-custom-main400`}>
