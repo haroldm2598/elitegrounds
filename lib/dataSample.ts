@@ -20,7 +20,7 @@ export const socialLinks = [
 		Icon: FaFacebookF,
 		link: 'https://www.facebook.com/elitegroundsep7',
 		name: 'elitegroundsep7',
-		color: 'text-sky-700'
+		color: 'text-sky-800'
 	},
 	{
 		Icon: FcGoogle,

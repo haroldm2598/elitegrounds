@@ -9,7 +9,7 @@ export default function Footer() {
 				return (
 					<h1 key={index} className='text-custom-main200'>
 						<Link href={link} className='flex items-center gap-2'>
-							<Icon className={`${color} `} /> {name}
+							<Icon className={`${color}`} /> {name}
 						</Link>
 					</h1>
 				);
