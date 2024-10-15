@@ -10,7 +10,7 @@ export const metadata = {
 export default function page() {
 	return (
 		<main className={`${lato.className} bg-custom-main400`}>
-			<section className='min-h-screen max-w-7xl mx-auto pt-10'>
+			<section className='min-h-screen max-w-7xl mx-auto pt-10 lg:px-4 xl:px-0'>
 				<HeadingSection title='Server Information' />
 
 				<section className='p-8'>
