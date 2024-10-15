@@ -55,6 +55,40 @@ export default function NewbieIdPage({ params }: IdProps) {
 							<h1 className='text-custom-main300 font-semibold opacity-60'>
 								{item!.date}
 							</h1>
+
+							{item!.description &&
+								item!.description.map((item, index) => {
+									return (
+										<section
+											className='text-2xl text-white font-semibold'
+											key={index}
+										>
+											<h1>{item.title}</h1>
+
+											<section>
+												{item.contents.map((item, index) => {
+													return (
+														<section key={index} className='flex items-center'>
+															<span className='inline-block w-3 h-3 bg-green-800 rounded-full mr-3 shadow-md'></span>
+															<h1 className='text-lg text-custom-main300 font-medium'>
+																{item.value}
+															</h1>
+														</section>
+													);
+												})}
+											</section>
+										</section>
+									);
+								})}
+							{/* 
+
+							tapos gawa ako ng nullish operator hindi naman kasi lahat ng array meron non
+							ito yung way na may color green na bullet point
+							<section key={index} className='flex items-center'>
+								<span className='inline-block w-3 h-3 bg-green-800 rounded-full mr-3 shadow-md'></span>
+								<h1 className='text-custom-main200'>{item.infoName}</h1>
+							</section>
+							*/}
 						</section>
 					);
 				})}

@@ -22,6 +22,14 @@ export interface CardProps {
 	imageSrc: string;
 	title: string;
 	date: string;
+	description?: Array<DescriptionProps>;
+}
+
+interface DescriptionProps {
+	title: string;
+	contents: Array<{
+		value: string;
+	}>;
 }
 
 export interface DownloadSourceProps {

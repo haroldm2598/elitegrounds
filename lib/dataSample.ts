@@ -65,6 +65,60 @@ export const serverInfoData = [
 
 export const newbieData = [
 	{
+		id: '0',
+		imageSrc: '/images/chibi.png',
+		title: 'farm guide',
+		date: '09/15/24',
+		description: [
+			{
+				title: 'Farming Guide RCB1 ( St. Research Dungeon)',
+				contents: [{ value: 'Dark Lunar set' }]
+			},
+			{
+				title: 'Saint Research',
+				contents: [
+					{ value: 'Alternative Weapon' },
+					{ value: 'Materials to exchange bagpack (nylon)' },
+					{ value: 'Materials to exchange elite dragon' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'Saint Power Plant',
+				contents: [
+					{ value: 'Alternative Weapon' },
+					{ value: 'Materials to exchange elite dragon' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'HeadB',
+				contents: [{ value: 'Refines' }, { value: 'Gold' }]
+			},
+			{
+				title: 'RootHole/Prison Test Zone/Prison',
+				contents: [
+					{ value: 'Level 180 Accesories (Rosary and Rings)' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'Mini Boss',
+				contents: [{ value: 'Matts and etc' }]
+			},
+			{
+				title: 'Big Boss',
+				contents: [
+					{ value: 'Last Weapon (Black Dragon and Astral Weapons)' },
+					{ value: 'Last Armor (Dark Lunar and Celestial Weaps)' }
+				]
+			}
+		]
+	},
+	{
 		id: '1',
 		imageSrc: '/newbieguide/elitegroundsnew.jpg',
 		title: 'RAN ONLINE ELITEGROUNDS EVENT',
