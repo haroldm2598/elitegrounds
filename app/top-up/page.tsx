@@ -45,13 +45,13 @@ export default function page() {
 							your E-POINTS CODE.'
 						/>
 
-						<div className='space-y-4'>
+						<div className='space-y-4 py-4'>
 							<Image
 								src='/images/topup/top1.png'
 								alt='gcash receipt'
 								width='300'
 								height='500'
-								className=''
+								className='mx-auto'
 							/>
 
 							<Image
@@ -59,7 +59,7 @@ export default function page() {
 								alt='gcash receipt'
 								width='300'
 								height='500'
-								className=''
+								className='mx-auto'
 							/>
 						</div>
 

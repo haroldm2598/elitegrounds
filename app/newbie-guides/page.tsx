@@ -1,11 +1,7 @@
-import { Suspense } from 'react';
+import { lato } from '@/lib/font';
 
 import HeadingSection from '@/components/reusable/HeadingSection';
-import Card from '@/components/newbie-guide/Card';
-import SkeletonCard from '@/components/newbie-guide/SkeletonCard';
-
-import { newbieData } from '@/lib/dataSample';
-import { lato } from '@/lib/font';
+import NewbieData from '@/components/newbie-guide/NewbieData';
 
 export const metadata = {
 	title: 'Ran online Elitegrounds | Newbie Guides'
@@ -18,20 +14,7 @@ export default function NewbiePage() {
 				<HeadingSection title='Newbie Guides' />
 
 				<section className='max-w-5xl mx-auto my-5 lg:my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10'>
-					{newbieData?.map((item) => {
-						const { id, imageSrc, title, date } = item;
-						return (
-							<Suspense key={id} fallback={<SkeletonCard />}>
-								<Card
-									key={id}
-									id={id}
-									imageSrc={imageSrc}
-									title={title}
-									date={date}
-								/>
-							</Suspense>
-						);
-					})}
+					<NewbieData />
 				</section>
 			</section>
 		</main>

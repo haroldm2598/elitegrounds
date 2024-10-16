@@ -69,7 +69,7 @@ export const newbieData = [
 		imageSrc: '/images/chibi.png',
 		title: 'farm guide',
 		date: '09/15/24',
-		description: [
+		descriptions: [
 			{
 				title: 'Farming Guide RCB1 ( St. Research Dungeon)',
 				contents: [{ value: 'Dark Lunar set' }]
