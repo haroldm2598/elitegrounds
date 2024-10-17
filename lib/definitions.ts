@@ -22,7 +22,7 @@ export interface CardProps {
 	imageSrc: string;
 	title: string;
 	date: string;
-	description?: Array<DescriptionProps>;
+	descriptions?: Array<DescriptionProps>;
 }
 
 interface DescriptionProps {

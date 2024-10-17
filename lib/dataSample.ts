@@ -25,6 +25,12 @@ export const socialLinks = [
 		color: 'text-sky-800'
 	},
 	{
+		Icon: FaFacebookF,
+		link: 'https://www.facebook.com/groups/elitegroundsep7/',
+		name: 'RanOnline:EliteGroundsEP7',
+		color: 'text-sky-800'
+	},
+	{
 		Icon: FcGoogle,
 		link: 'mailto:elitegroundsran@gmail.com',
 		name: 'elitegroundsran@gmail.com',
@@ -69,7 +75,7 @@ export const newbieData = [
 		imageSrc: '/images/chibi.png',
 		title: 'farm guide',
 		date: '09/15/24',
-		description: [
+		descriptions: [
 			{
 				title: 'Farming Guide RCB1 ( St. Research Dungeon)',
 				contents: [{ value: 'Dark Lunar set' }]
