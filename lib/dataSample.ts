@@ -6,7 +6,14 @@ import { SiMediafire, SiGoogledrive, SiMega } from 'react-icons/si';
 export const navLinks: Array<NavLinksProps> = [
 	{ name: 'Server Information', links: '/server-information' },
 	{ name: 'Downloads', links: '/downloads' },
-	{ name: 'Newbie Guides', links: '/newbie-guides' },
+	{
+		name: 'News & Guide',
+		links: '/newbie-guides',
+		contents: [
+			{ contentTitle: 'news', contentLinks: '/news' },
+			{ contentTitle: 'guide', contentLinks: '/guide' }
+		]
+	},
 	{ name: 'Top-up', links: '/top-up' }
 ];
 

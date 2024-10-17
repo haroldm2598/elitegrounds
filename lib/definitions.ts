@@ -3,6 +3,10 @@ import { IconType } from 'react-icons';
 export interface NavLinksProps {
 	name: string;
 	links: string;
+	contents?: Array<{
+		contentTitle: string;
+		contentLinks: string;
+	}>;
 }
 
 export interface HeadingSectionProps {
