@@ -8,7 +8,7 @@ export const navLinks: Array<NavLinksProps> = [
 	{ name: 'Downloads', links: '/downloads' },
 	{
 		name: 'News & Guide',
-		links: '/newbie-guides',
+		links: '/news-guides',
 		contents: [
 			{ contentTitle: 'news', contentLinks: '/news' },
 			{ contentTitle: 'guide', contentLinks: '/guide' }
