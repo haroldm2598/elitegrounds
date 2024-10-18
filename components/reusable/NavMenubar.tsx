@@ -1,9 +1,13 @@
 'use client';
 
-import * as React from 'react';
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
+import { lato } from '@/lib/font';
+
+import { navLinks } from '@/lib/dataSample';
+
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -13,134 +17,98 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
-interface ComponentProps {
-	title: string;
-	href: string;
-	description: string;
-}
-
-const components: ComponentProps[] = [
-	{
-		title: 'Alert Dialog',
-		href: '/docs/primitives/alert-dialog',
-		description:
-			'A modal dialog that interrupts the user with important content and expects a response.'
-	},
-	{
-		title: 'Hover Card',
-		href: '/docs/primitives/hover-card',
-		description: 'For sighted users to preview content available behind a link.'
-	},
-	{
-		title: 'Progress',
-		href: '/docs/primitives/progress',
-		description:
-			'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.'
-	},
-	{
-		title: 'Scroll-area',
-		href: '/docs/primitives/scroll-area',
-		description: 'Visually or semantically separates content.'
-	},
-	{
-		title: 'Tabs',
-		href: '/docs/primitives/tabs',
-		description:
-			'A set of layered sections of content—known as tab panels—that are displayed one at a time.'
-	},
-	{
-		title: 'Tooltip',
-		href: '/docs/primitives/tooltip',
-		description:
-			'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.'
-	}
-];
-
-const componentSecond: ComponentProps[] = [
-	{
-		title: 'Alert Dialog',
-		href: '/docs/primitives/alert-dialog',
-		description:
-			'A modal dialog that interrupts the user with important content and expects a response.'
-	},
-	{
-		title: 'Hover Card',
-		href: '/docs/primitives/hover-card',
-		description: 'For sighted users to preview content available behind a link.'
-	},
-	{
-		title: 'Progress',
-		href: '/docs/primitives/progress',
-		description:
-			'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.'
-	}
-];
 
 export default function NavMenubar() {
 	return (
 		<NavigationMenu>
 			<NavigationMenuList>
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-					<NavigationMenuContent>
-						<ul className='grid gap-3 p-4 md:w-[100px] lg:w-[200px] lg:grid-cols-1'>
-							{componentSecond.map((component) => (
-								<ListItem
-									key={component.title}
-									title={component.title}
-									href={component.href}
-								></ListItem>
-							))}
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
+				{navLinks.map((item, index) => {
+					const { name, links, contents } = item;
+					return (
+						<NavigationMenuItem className={lato.className} key={index}>
+							{/* absolute should be at bottom of current target */}
 
-				<NavigationMenuItem>
-					<NavigationMenuTrigger>Components</NavigationMenuTrigger>
-					<NavigationMenuContent>
-						<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-							{components.map((component) => (
-								<ListItem
-									key={component.title}
-									title={component.title}
-									href={component.href}
-								></ListItem>
-							))}
-						</ul>
-					</NavigationMenuContent>
-				</NavigationMenuItem>
-
-				<NavigationMenuItem>
-					<Link href='/docs' legacyBehavior passHref>
-						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-							Documentation
-						</NavigationMenuLink>
-					</Link>
-				</NavigationMenuItem>
+							{contents?.length ? (
+								<>
+									<NavigationMenuTrigger>{name}</NavigationMenuTrigger>
+									<NavigationMenuContent>
+										<ul className='grid gap-3 p-4 md:w-[100px] lg:w-[200px] lg:grid-cols-1'>
+											{contents?.map((component) => (
+												<ListItem
+													key={component.contentTitle}
+													title={component.contentTitle}
+													href={component.contentLinks}
+												></ListItem>
+											))}
+										</ul>
+									</NavigationMenuContent>
+								</>
+							) : (
+								<NavigationMenuItem>
+									<Link href={links} legacyBehavior passHref>
+										<NavigationMenuLink
+											className={navigationMenuTriggerStyle()}
+										>
+											{name}
+										</NavigationMenuLink>
+									</Link>
+								</NavigationMenuItem>
+							)}
+						</NavigationMenuItem>
+					);
+				})}
 			</NavigationMenuList>
 		</NavigationMenu>
 	);
 }
 
-const ListItem = React.forwardRef<
-	React.ElementRef<'a'>,
-	React.ComponentPropsWithoutRef<'a'>
->(({ className, title, ...props }, ref) => {
-	return (
-		<li>
-			<NavigationMenuLink asChild>
-				<a
-					ref={ref}
-					className={cn(
-						'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-						className
-					)}
-					{...props}
-				>
-					<div className='text-sm font-medium leading-none'>{title}</div>
-				</a>
-			</NavigationMenuLink>
-		</li>
-	);
-});
+// (
+// 	<NavigationMenu>
+// 		<NavigationMenuList>
+// 			<NavigationMenuItem className={lato.className}>
+// 				<NavigationMenuTrigger>Server Information</NavigationMenuTrigger>
+// 				<NavigationMenuContent>
+// 					<ul className='grid gap-3 p-4 md:w-[100px] lg:w-[200px] lg:grid-cols-1'>
+// 						{contents?.map((component) => (
+// 							<ListItem
+// 								key={component.title}
+// 								title={component.title}
+// 								href={component.href}
+// 							></ListItem>
+// 						))}
+// 					</ul>
+// 				</NavigationMenuContent>
+// 			</NavigationMenuItem>
+
+// 			<NavigationMenuItem>
+// 				<Link href='/testing' legacyBehavior passHref>
+// 					<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+// 						Downloads
+// 					</NavigationMenuLink>
+// 				</Link>
+// 			</NavigationMenuItem>
+// 		</NavigationMenuList>
+// 	</NavigationMenu>
+// );
+
+const ListItem = forwardRef<ElementRef<'a'>, ComponentPropsWithoutRef<'a'>>(
+	({ className, title, ...props }, ref) => {
+		return (
+			<li>
+				<NavigationMenuLink asChild>
+					<a
+						ref={ref}
+						className={cn(
+							'text-lg hover:text-custom-main200 font-semibold transition-all duration-300 ease-in-out',
+							className
+						)}
+						{...props}
+					>
+						{title}
+					</a>
+				</NavigationMenuLink>
+			</li>
+		);
+	}
+);
 ListItem.displayName = 'ListItem';

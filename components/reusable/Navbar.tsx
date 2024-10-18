@@ -8,6 +8,7 @@ import { navLinks } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
 import MobileDrawer from '../ui/kit/MobileDrawer';
+// import NavMenubar from './NavMenubar';
 
 export default function Navbar() {
 	const pathname = usePathname();
@@ -43,6 +44,10 @@ export default function Navbar() {
 						);
 					})}
 				</ul>
+
+				{/* <div className='hidden lg:flex gap-8'>
+					<NavMenubar />
+				</div> */}
 
 				<div className='flex lg:hidden'>
 					<MobileDrawer />
