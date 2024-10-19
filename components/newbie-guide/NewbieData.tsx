@@ -19,7 +19,7 @@ export default function NewbieData() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			await new Promise((resolve) => setTimeout(resolve, 500));
 			setData(newbieData);
 			setIsloading(false);
 		};

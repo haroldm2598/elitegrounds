@@ -163,6 +163,96 @@ export const newbieData = [
 	}
 ];
 
+export const newsData = [
+	{
+		id: '1',
+		imageSrc: '/newbieguide/elitegroundsnew.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS EVENT',
+		date: '09/12/24'
+	},
+	{
+		id: '2',
+		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
+		title: 'GUILD LEADER AND STREAMERS',
+		date: '09/09/24'
+	},
+	{
+		id: '3',
+		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
+		title: 'OFFICIAL BETA TEST',
+		date: '09/05/24'
+	},
+	{
+		id: '4',
+		imageSrc: '/newbieguide/elitegroundsnew4.jpg',
+		title: 'bakbakan round',
+		date: '09/04/24'
+	},
+	{
+		id: '5',
+		imageSrc: '/newbieguide/elitegroundsnew5.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS OFFICIAL SERVER',
+		date: '09/01/24'
+	}
+];
+
+export const guideData = [
+	{
+		id: '0',
+		imageSrc: '/images/chibi.png',
+		title: 'farm guide',
+		date: '09/15/24',
+		descriptions: [
+			{
+				title: 'Farming Guide RCB1 ( St. Research Dungeon)',
+				contents: [{ value: 'Dark Lunar set' }]
+			},
+			{
+				title: 'Saint Research',
+				contents: [
+					{ value: 'Alternative Weapon' },
+					{ value: 'Materials to exchange bagpack (nylon)' },
+					{ value: 'Materials to exchange elite dragon' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'Saint Power Plant',
+				contents: [
+					{ value: 'Alternative Weapon' },
+					{ value: 'Materials to exchange elite dragon' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'HeadB',
+				contents: [{ value: 'Refines' }, { value: 'Gold' }]
+			},
+			{
+				title: 'RootHole/Prison Test Zone/Prison',
+				contents: [
+					{ value: 'Level 180 Accesories (Rosary and Rings)' },
+					{ value: 'Refines' },
+					{ value: 'Gold' }
+				]
+			},
+			{
+				title: 'Mini Boss',
+				contents: [{ value: 'Matts and etc' }]
+			},
+			{
+				title: 'Big Boss',
+				contents: [
+					{ value: 'Last Weapon (Black Dragon and Astral Weapons)' },
+					{ value: 'Last Armor (Dark Lunar and Celestial Weaps)' }
+				]
+			}
+		]
+	}
+];
+
 export const downloadSource: DownloadSourceProps[] = [
 	{
 		name: 'mediafire',
