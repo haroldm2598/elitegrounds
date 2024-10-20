@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 import Card from '@/components/newbie-guide/Card';
 import SkeletonCard from '@/components/newbie-guide/SkeletonCard';
 
-import { newbieData } from '@/lib/dataSample';
+interface NewbieDataProps {
+	dataArr: NewbieItem[];
+}
 
 interface NewbieItem {
 	id: string;
@@ -13,24 +15,24 @@ interface NewbieItem {
 	date: string;
 }
 
-export default function NewbieData() {
+export default function NewbieData({ dataArr }: NewbieDataProps) {
 	const [isLoading, setIsloading] = useState<boolean>(true);
 	const [data, setData] = useState<NewbieItem[]>([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			await new Promise((resolve) => setTimeout(resolve, 500));
-			setData(newbieData);
+			setData(dataArr);
 			setIsloading(false);
 		};
 
 		fetchData();
-	}, []);
+	}, [dataArr]);
 
 	return (
 		<>
 			{isLoading
-				? newbieData.map((_, index) => <SkeletonCard key={index} />)
+				? dataArr.map((_, index) => <SkeletonCard key={index} />)
 				: data?.map((item) => {
 						const { id, imageSrc, title, date } = item;
 

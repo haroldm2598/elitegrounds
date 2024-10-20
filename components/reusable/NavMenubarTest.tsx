@@ -32,12 +32,20 @@ export default function NavMenubarTest() {
 								<ul className='max-w-xs w-full bg-custom-main500 relative z-50'>
 									{contents?.map((content) => {
 										return (
+											// kailangan kapag hindi pa visit is mag stay sa color yung naka set saken at kapag visited
 											<li
 												key={content.contentTitle}
-												className={`hover:text-custom-main200
+												className={` hover:text-custom-main200
                                                 hover:bg-custom-main400 rounded-lg transition-all duration-300 ease-in-out`}
 											>
-												<Link href={content.contentLinks}>
+												<Link
+													href={content.contentLinks}
+													className={`${
+														pathname === content.contentLinks
+															? 'visited:text-custom-main200'
+															: 'text-custom-main300'
+													}`}
+												>
 													{content.contentTitle}
 												</Link>
 											</li>
