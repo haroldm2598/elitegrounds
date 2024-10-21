@@ -1,9 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 import { Button } from '../ui/kit/button';
 import { CardProps } from '@/lib/definitions';
-import Link from 'next/link';
 
 export default function Card({ id, imageSrc, title, date }: CardProps) {
+	const pathname = usePathname();
 	return (
 		<section className='bg-custom-main500 h-80 max-w-72 w-full flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all ease-in-out duration-300 overflow-hidden group border-[1px] border-solid border-custom-main600'>
 			<figure className=''>
@@ -25,7 +28,7 @@ export default function Card({ id, imageSrc, title, date }: CardProps) {
 				</div>
 
 				<div>
-					<Link href={`/newbie-guides/${id}`}>
+					<Link href={`${window.location.origin}/${pathname}/${id}`}>
 						<Button className='hover:bg-primary/70'>Read more</Button>
 					</Link>
 				</div>

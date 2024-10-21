@@ -6,14 +6,28 @@ import { SiMediafire, SiGoogledrive, SiMega } from 'react-icons/si';
 export const navLinks: Array<NavLinksProps> = [
 	{ name: 'Server Information', links: '/server-information' },
 	{ name: 'Downloads', links: '/downloads' },
-	{ name: 'Newbie Guides', links: '/newbie-guides' },
+	{
+		name: 'News & Guide',
+		links: '/news-guides',
+		contents: [
+			{ contentTitle: 'news', contentLinks: '/news' },
+			{ contentTitle: 'guide', contentLinks: '/guide' }
+		]
+	},
 	{ name: 'Top-up', links: '/top-up' }
 ];
 
 export const mobileNavLinks: Array<NavLinksProps> = [
 	{ name: 'Home', links: '/' },
 	{ name: 'Server Information', links: '/server-information' },
-	{ name: 'Newbie Guides', links: '/newbie-guides' },
+	{
+		name: 'News & Guide',
+		links: '/news-guides',
+		contents: [
+			{ contentTitle: 'news', contentLinks: '/news' },
+			{ contentTitle: 'guide', contentLinks: '/guide' }
+		]
+	},
 	{ name: 'Top-up', links: '/top-up' }
 ];
 
@@ -22,6 +36,12 @@ export const socialLinks = [
 		Icon: FaFacebookF,
 		link: 'https://www.facebook.com/elitegroundsep7',
 		name: 'elitegroundsep7',
+		color: 'text-sky-800'
+	},
+	{
+		Icon: FaFacebookF,
+		link: 'https://www.facebook.com/groups/elitegroundsep7/',
+		name: 'RanOnline:EliteGroundsEP7',
 		color: 'text-sky-800'
 	},
 	{
@@ -63,7 +83,40 @@ export const serverInfoData = [
 	{ infoName: 'Guaranteed 101% Play to earn' }
 ];
 
-export const newbieData = [
+export const newsData = [
+	{
+		id: '1',
+		imageSrc: '/newbieguide/elitegroundsnew.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS EVENT',
+		date: '09/12/24'
+	},
+	{
+		id: '2',
+		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
+		title: 'GUILD LEADER AND STREAMERS',
+		date: '09/09/24'
+	},
+	{
+		id: '3',
+		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
+		title: 'OFFICIAL BETA TEST',
+		date: '09/05/24'
+	},
+	{
+		id: '4',
+		imageSrc: '/newbieguide/elitegroundsnew4.jpg',
+		title: 'bakbakan round',
+		date: '09/04/24'
+	},
+	{
+		id: '5',
+		imageSrc: '/newbieguide/elitegroundsnew5.jpg',
+		title: 'RAN ONLINE ELITEGROUNDS OFFICIAL SERVER',
+		date: '09/01/24'
+	}
+];
+
+export const guideData = [
 	{
 		id: '0',
 		imageSrc: '/images/chibi.png',
@@ -117,36 +170,6 @@ export const newbieData = [
 				]
 			}
 		]
-	},
-	{
-		id: '1',
-		imageSrc: '/newbieguide/elitegroundsnew.jpg',
-		title: 'RAN ONLINE ELITEGROUNDS EVENT',
-		date: '09/12/24'
-	},
-	{
-		id: '2',
-		imageSrc: '/newbieguide/elitegroundsnew2.jpg',
-		title: 'GUILD LEADER AND STREAMERS',
-		date: '09/09/24'
-	},
-	{
-		id: '3',
-		imageSrc: '/newbieguide/elitegroundsnew3.jpg',
-		title: 'OFFICIAL BETA TEST',
-		date: '09/05/24'
-	},
-	{
-		id: '4',
-		imageSrc: '/newbieguide/elitegroundsnew4.jpg',
-		title: 'bakbakan round',
-		date: '09/04/24'
-	},
-	{
-		id: '5',
-		imageSrc: '/newbieguide/elitegroundsnew5.jpg',
-		title: 'RAN ONLINE ELITEGROUNDS OFFICIAL SERVER',
-		date: '09/01/24'
 	}
 ];
 

@@ -1,17 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import { navLinks } from '@/lib/dataSample';
 import { lato } from '@/lib/font';
 
 import MobileDrawer from '../ui/kit/MobileDrawer';
+import NavMenubar from './NavMenubar';
+import { navLinks } from '@/lib/dataSample';
 
 export default function Navbar() {
-	const pathname = usePathname();
-
 	return (
 		<header className={`${lato.className} bg-custom-main100 py-4`}>
 			<nav className='max-w-7xl mx-auto flex justify-between items-center px-6 xl:px-0'>
@@ -27,7 +25,20 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				<ul className='hidden lg:flex gap-8'>
+				<div className='hidden lg:flex gap-8'>
+					<NavMenubar dataArr={navLinks} menuPosition='lg:menu-horizontal' />
+				</div>
+
+				<div className='flex lg:hidden'>
+					<MobileDrawer />
+				</div>
+			</nav>
+		</header>
+	);
+}
+
+{
+	/* <ul className='hidden lg:flex gap-8'>
 					{navLinks?.map((item, index) => {
 						return (
 							<li
@@ -42,12 +53,5 @@ export default function Navbar() {
 							</li>
 						);
 					})}
-				</ul>
-
-				<div className='flex lg:hidden'>
-					<MobileDrawer />
-				</div>
-			</nav>
-		</header>
-	);
+				</ul> */
 }
