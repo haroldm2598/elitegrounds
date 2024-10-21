@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from './button';
 
 import { mobileNavLinks, socialLinks } from '@/lib/dataSample';
-import NavMenubarTest from '@/components/reusable/NavMenubarTest';
+import NavMenubar from '@/components/reusable/NavMenubar';
 
 export default function MobileDrawer() {
 	const [isClick, setIsClick] = useState<boolean>(false);
@@ -62,23 +62,7 @@ export default function MobileDrawer() {
 					</div>
 
 					<section className='flex flex-col justify-between h-[28rem]'>
-						{/* Original navbar */}
-						{/* <ul className='flex flex-col items-end'>
-							{mobileNavLinks?.map((item, index) => {
-								return (
-									<li
-										key={index}
-										className='text-custom-main300 text-lg hover:text-custom-main200 font-semibold transition-all duration-300 ease-in-out'
-									>
-										<Link href={item.links} onClick={handleCloseMenu}>
-											{item.name}
-										</Link>
-									</li>
-								);
-							})}
-						</ul> */}
-
-						<NavMenubarTest
+						<NavMenubar
 							dataArr={mobileNavLinks}
 							onClick={handleCloseMenu}
 							menuPosition='flex flex-col items-end pr-6'

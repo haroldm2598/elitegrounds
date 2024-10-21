@@ -16,7 +16,7 @@ interface NavMenubarProps {
 	onClick?: () => void;
 }
 
-export default function NavMenubarTest({
+export default function NavMenubar({
 	dataArr,
 	menuPosition,
 	onClick
@@ -42,7 +42,6 @@ export default function NavMenubarTest({
 								<ul className='max-w-xs w-full bg-custom-main500 relative z-50'>
 									{contents?.map((content) => {
 										return (
-											// kailangan kapag hindi pa visit is mag stay sa color yung naka set saken at kapag visited
 											<li
 												key={content.contentTitle}
 												className={` hover:text-custom-main200
@@ -52,7 +51,7 @@ export default function NavMenubarTest({
 													href={content.contentLinks}
 													className={`${
 														pathname === content.contentLinks
-															? 'visited:text-custom-main200'
+															? 'link:text-custom-main200 visited:text-custom-main200'
 															: 'text-custom-main300'
 													}`}
 													onClick={onClick}
@@ -69,7 +68,7 @@ export default function NavMenubarTest({
 								href={links}
 								className={`${
 									pathname === links
-										? 'visited:text-custom-main200'
+										? 'link:text-custom-main200 visited:text-custom-main200'
 										: 'text-custom-main300'
 								} hover:text-custom-main200`}
 								onClick={onClick}
