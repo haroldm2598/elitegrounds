@@ -20,7 +20,14 @@ export const navLinks: Array<NavLinksProps> = [
 export const mobileNavLinks: Array<NavLinksProps> = [
 	{ name: 'Home', links: '/' },
 	{ name: 'Server Information', links: '/server-information' },
-	{ name: 'Newbie Guides', links: '/newbie-guides' },
+	{
+		name: 'News & Guide',
+		links: '/news-guides',
+		contents: [
+			{ contentTitle: 'news', contentLinks: '/news' },
+			{ contentTitle: 'guide', contentLinks: '/guide' }
+		]
+	},
 	{ name: 'Top-up', links: '/top-up' }
 ];
 

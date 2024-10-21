@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Button } from './button';
 
 import { mobileNavLinks, socialLinks } from '@/lib/dataSample';
+import NavMenubarTest from '@/components/reusable/NavMenubarTest';
 
 export default function MobileDrawer() {
 	const [isClick, setIsClick] = useState<boolean>(false);
@@ -61,7 +62,8 @@ export default function MobileDrawer() {
 					</div>
 
 					<section className='flex flex-col justify-between h-[28rem]'>
-						<ul className='flex flex-col items-end'>
+						{/* Original navbar */}
+						{/* <ul className='flex flex-col items-end'>
 							{mobileNavLinks?.map((item, index) => {
 								return (
 									<li
@@ -74,7 +76,13 @@ export default function MobileDrawer() {
 									</li>
 								);
 							})}
-						</ul>
+						</ul> */}
+
+						<NavMenubarTest
+							dataArr={mobileNavLinks}
+							onClick={handleCloseMenu}
+							menuPosition='flex flex-col items-end pr-6'
+						/>
 
 						<hr className='border-t border-gray-500 my-4 mx-0 w-full' />
 

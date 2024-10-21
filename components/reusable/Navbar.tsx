@@ -7,6 +7,7 @@ import { lato } from '@/lib/font';
 
 import MobileDrawer from '../ui/kit/MobileDrawer';
 import NavMenubarTest from './NavMenubarTest';
+import { navLinks } from '@/lib/dataSample';
 
 export default function Navbar() {
 	return (
@@ -25,7 +26,10 @@ export default function Navbar() {
 				</div>
 
 				<div className='hidden lg:flex gap-8'>
-					<NavMenubarTest />
+					<NavMenubarTest
+						dataArr={navLinks}
+						menuPosition='lg:menu-horizontal'
+					/>
 				</div>
 
 				<div className='flex lg:hidden'>

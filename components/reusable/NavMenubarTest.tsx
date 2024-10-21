@@ -4,18 +4,28 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { lato } from '@/lib/font';
 
-import { navLinks } from '@/lib/dataSample';
+import { NavLinksProps } from '@/lib/definitions';
 
 // REFERRENCE NAV MENU
 // # Navbar with menu and submenu
 // https://daisyui.com/components/navbar/
 
-export default function NavMenubarTest() {
+interface NavMenubarProps {
+	dataArr: Array<NavLinksProps>;
+	menuPosition?: string;
+	onClick?: () => void;
+}
+
+export default function NavMenubarTest({
+	dataArr,
+	menuPosition,
+	onClick
+}: NavMenubarProps) {
 	const pathname = usePathname();
 
 	return (
-		<ul className='menu lg:menu-horizontal space-x-4'>
-			{navLinks.map((item) => {
+		<ul className={`menu ${menuPosition} space-x-4`}>
+			{dataArr?.map((item) => {
 				const { name, links, contents } = item;
 
 				return (
@@ -45,6 +55,7 @@ export default function NavMenubarTest() {
 															? 'visited:text-custom-main200'
 															: 'text-custom-main300'
 													}`}
+													onClick={onClick}
 												>
 													{content.contentTitle}
 												</Link>
@@ -61,6 +72,7 @@ export default function NavMenubarTest() {
 										? 'visited:text-custom-main200'
 										: 'text-custom-main300'
 								} hover:text-custom-main200`}
+								onClick={onClick}
 							>
 								{name}
 							</Link>
