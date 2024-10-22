@@ -41,3 +41,11 @@ export interface DownloadSourceProps {
 	link: string;
 	Icon: IconType;
 }
+
+export interface NewsItemProps {
+	id: number;
+	title: string;
+	description: string;
+	imageSrc: string;
+	created_at: string;
+}
