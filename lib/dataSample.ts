@@ -176,17 +176,17 @@ export const guideData = [
 export const downloadSource: DownloadSourceProps[] = [
 	{
 		name: 'mediafire',
-		link: 'https://www.mediafire.com/file/sb89yqaj4c7upne/RanEliteGroundsEP7.exe/file',
+		link: 'https://www.mediafire.com/file/hkbirrlwhj170lm/RanEliteGroundsEP7.exe/file',
 		Icon: SiMediafire
 	},
 	{
 		name: 'google drive',
-		link: 'https://drive.google.com/file/d/1YRqS6C6dnakbzkcpPGEDGj4mQf9QYUBD/view',
+		link: 'https://drive.google.com/file/d/1D5UYtW2lIbhderg18jqpkrSdIjpZWsVw/view',
 		Icon: SiGoogledrive
 	},
 	{
 		name: 'mega',
-		link: 'https://mega.nz/file/UQAUDCab#q8Tj10iKOuBEgEfmDcG8Sm0xj0C41619b4ANopYfX7Y',
+		link: 'https://mega.nz/file/VFwk3ZRQ#yzfFncGhxpuflEfWLnXd0i08ad-Hc8UuphrOUj_F_sI',
 		Icon: SiMega
 	}
 ];
