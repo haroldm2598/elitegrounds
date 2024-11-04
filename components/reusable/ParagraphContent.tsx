@@ -1,6 +1,16 @@
-export default function ParagraphContent({ content }: { content: string }) {
+interface ParagraphContentProps {
+	content: string;
+	textColor?: string;
+}
+
+export default function ParagraphContent({
+	content,
+	textColor
+}: ParagraphContentProps) {
 	return (
-		<p className='text-xl font-semibold text-custom-main200 leading-6'>
+		<p
+			className={`text-xl font-semibold leading-6 text-custom-main200 ${textColor}`}
+		>
 			{content}
 		</p>
 	);

@@ -54,21 +54,18 @@ export const socialLinks = [
 
 export const serverInfoData = [
 	{ infoName: '230 Max Level | 207 Max Skill' },
-	{ infoName: 'Sync Gameplay' },
+	{ infoName: '2013 Ran Online PH Gameplay' },
 	{ infoName: '6 Balanced Classes (Classic Extreme)' },
 	{ infoName: 'InGame Item Mall ' },
 	{ infoName: 'In-Game Registration' },
 	{ infoName: 'Max Upgrade: +10' },
 	{ infoName: 'Experience Rate: High' },
-	{ infoName: 'Drop Rate: Low' },
+	{ infoName: 'Drop Rate: Mid' },
 	{ infoName: 'No Reform' },
 	{ infoName: 'No Premium Refines' },
 	{ infoName: 'No Spoon Feed' },
-	{ infoName: 'Pots Based Gameplay' },
 	{ infoName: 'Hunt Based' },
-	{ infoName: 'Dungeon RCB1' },
 	{ infoName: 'Open skills click to learn' },
-	{ infoName: 'Pull/Push (No anti skills, stuns and etc)' },
 	{ infoName: 'Official Gunner Int Summon' },
 	{ infoName: 'Official use of Contribution & Activity Points' },
 	{ infoName: 'Official Item Combination' },
@@ -79,6 +76,7 @@ export const serverInfoData = [
 	{ infoName: 'Official Tyranny War (GvG)' },
 	{ infoName: 'Official School War' },
 	{ infoName: 'Official Club War' },
+	{ infoName: 'Official Emperium War' },
 	{ infoName: '101% Free to play' },
 	{ infoName: 'Guaranteed 101% Play to earn' }
 ];
@@ -176,17 +174,17 @@ export const guideData = [
 export const downloadSource: DownloadSourceProps[] = [
 	{
 		name: 'mediafire',
-		link: 'https://www.mediafire.com/file/hkbirrlwhj170lm/RanEliteGroundsEP7.exe/file',
+		link: 'https://www.mediafire.com/file/72zqvrrkt1h31uc/Elite+Grounds+EP7.exe/file',
 		Icon: SiMediafire
 	},
 	{
 		name: 'google drive',
-		link: 'https://drive.google.com/file/d/1D5UYtW2lIbhderg18jqpkrSdIjpZWsVw/view',
+		link: 'https://drive.google.com/file/d/1LMsVv3qPHAhuM1oGCk3wZ17ppyWjct5P/view?usp=sharing',
 		Icon: SiGoogledrive
 	},
 	{
 		name: 'mega',
-		link: 'https://mega.nz/file/VFwk3ZRQ#yzfFncGhxpuflEfWLnXd0i08ad-Hc8UuphrOUj_F_sI',
+		link: 'https://mega.nz/file/NEYgwJzD#2Ry1rMIrWsx5PdeByLMaHhwBq0efVLepjANVR-dD13k',
 		Icon: SiMega
 	}
 ];

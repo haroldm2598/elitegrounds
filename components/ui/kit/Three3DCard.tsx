@@ -44,6 +44,7 @@ export function Three3DCard({ title, downloadSource }: Three3DCardProps) {
 							>
 								<Link
 									href={link}
+									target='_blank'
 									className='p-4 flex items-center rounded-md bg-black text-white text-xs font-bold space-x-2 overflow-hidden transition-all duration-300 ease-in-out group-hover:bg-custom-main600'
 								>
 									<span className='text-custom-main200 uppercase'>{name}</span>

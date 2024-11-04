@@ -18,19 +18,19 @@ export default function Home() {
 				<section className='order-1 lg:order-0 flex py-10 lg:py-0 pl-6 xl:pl-0'>
 					<div className='w-3 h-44 bg-custom-gradient-top mr-4 my-auto rounded-sm'></div>
 
-					<div className='space-y-6'>
+					<div className='space-y-4'>
 						<div className='space-y-2'>
 							<h1 className='text-5xl font-bold text-custom-main200'>
 								Welcome to
 							</h1>
-							<h2 className='w-40 leading-5 text-xl font-medium text-custom-main300'>
-								Ran Online: Elite Grounds Ep7
+							<h2 className='w-60 leading-5 text-xl font-medium text-custom-main300 text-center'>
+								Ran Online: Elite Grounds EP7
 							</h2>
 						</div>
 
 						<div className='space-y-2'>
 							<h2 className='text-2xl font-medium text-custom-main200'>
-								Classic Gameplay
+								2013 Ran Online PH Gameplay
 							</h2>
 							<Button
 								variant='outline'

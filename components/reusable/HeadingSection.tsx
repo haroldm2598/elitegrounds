@@ -10,7 +10,7 @@ export default function HeadingSection({ title }: HeadingSectionProps) {
 					{title}
 				</h1>
 				<h2 className='text-[1.5rem] lg:text-[2rem] font-medium text-custom-main300'>
-					Ran Online Elitegrounds Server EP7
+					Ran Online: Elite Grounds EP7
 				</h2>
 			</div>
 		</section>

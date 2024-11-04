@@ -105,21 +105,22 @@ export default function page() {
 						</section>
 
 						<section>
-							<HeadingTitle title='How to Top-up?' />
-
 							<div className='space-y-4 max-w-lg w-full'>
 								<ParagraphContent
 									content='Top-up is voluntary and non-refundable. Contributions support
 									server operations, hardware, and software upgrades.'
+									textColor='text-red-400'
 								/>
 
 								<ParagraphContent
 									content='We do not guarantee player-to-player transactions. We prefer
 									using Verified Midmans inside of our game!'
+									textColor='text-green-400'
 								/>
 								<ParagraphContent
 									content='Make sure to double check all the information provided before
 									you send MONEY online.'
+									textColor='text-yellow-400'
 								/>
 							</div>
 						</section>
