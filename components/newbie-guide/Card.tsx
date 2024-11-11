@@ -9,15 +9,13 @@ export default function Card({ id, imageSrc, title, date }: CardProps) {
 	const pathname = usePathname();
 	return (
 		<section className='bg-custom-main500 h-80 max-w-72 w-full flex flex-col rounded-md shadow-lg hover:shadow-2xl transition-all ease-in-out duration-300 overflow-hidden group border-[1px] border-solid border-custom-main600'>
-			<figure className=''>
-				<Image
-					src={imageSrc}
-					height='1500'
-					width='1500'
-					className='h-44 w-full object-cover transform transition-transform duration-300 group-hover:scale-110'
-					alt='thumbnail'
-				/>
-			</figure>
+			<Image
+				src={imageSrc}
+				height='3000'
+				width='500'
+				className='h-40 object-cover transform transition-transform duration-300 group-hover:scale-110'
+				alt='thumbnail'
+			/>
 
 			<div className='flex-1 p-2 flex flex-col justify-between'>
 				<div>

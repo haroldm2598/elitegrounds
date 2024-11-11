@@ -11,7 +11,8 @@ export const navLinks: Array<NavLinksProps> = [
 		links: '/news-guides',
 		contents: [
 			{ contentTitle: 'news', contentLinks: '/news' },
-			{ contentTitle: 'guide', contentLinks: '/guide' }
+			{ contentTitle: 'guide', contentLinks: '/guide' },
+			{ contentTitle: 'test upload', contentLinks: '/test-upload' }
 		]
 	},
 	{ name: 'Top-up', links: '/top-up' }
